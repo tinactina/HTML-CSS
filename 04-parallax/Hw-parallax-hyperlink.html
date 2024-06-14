@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      margin: 0;
+      /* height: 3000px; */
+
+    }
+    
+    a {
+      text-decoration: none;
+    
+    }
+    .nav {
+      width: calc( 80% - 10px * 2) ;
+      height: calc( 80px - 10px * 2 );
+      padding: 10px;
+      background-color: rgb(178, 234, 142);
+      position: fixed;
+      left: 10%;
+      z-index: 9;
+    }
+    .logo{
+      width:60px;
+      height: 60px;
+      background-image: url(./img/image-1.webp);
+      background-size: cover;
+      border-radius: 50%;
+      float:left;
+    }
+    .logo:hover{
+    transform: scale(1.2) rotate(55deg) rotatey(2deg);
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-direction: nomal;
+    
+    }
+    .nav-btn-all{
+      height: 60px;
+      float: right;
+    }
+    .nav-btn{
+      width: 80px;
+      height: 40px;
+      background-color: rgb(243, 136, 124);
+      float:left;
+      margin-left: 10px;
+      margin-top: 10px;
+      font-size: 20px;
+      letter-spacing: 3px;
+      font-weight: bold;
+      font-family:'Times New Roman', Times, serif;
+      color:rgb(28, 30, 26);
+      text-align: center;
+      line-height:40px;
+      border-radius: 10px;
+    }
+    .nav-btn:hover{
+      background-color: rgb(248, 245, 196);
+      color: rgb(24, 75, 75);
+    }
+    .nav-btn:active{
+      background-color: rgb(14, 106, 70);
+      color: rgb(251, 255, 255);
+    }
+    .container {
+      width: 80%;
+      margin:auto;
+    }
+    .banner{
+      width: 100%;
+      height: 50vh;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position:center;
+      background-attachment: fixed;
+      padding-top: 50vh;
+    }
+    #banner-1{
+      background-image: url(./img/LINE_ALBUM_Fukuoka_240502_35.jpg);
+    }
+    #banner-2{
+      background-image: url(./img/LINE_ALBUM_Fukuoka_240502_62.jpg);  
+    }
+    #banner-3{
+      background-image: url(./img/LINE_ALBUM_Fukuoka_240502_17.jpg);  
+    }
+    .mask{
+      background-color: rgb(0, 0, 0);
+      width: 100%;
+      height: 50vh;
+      opacity: 0.5;
+      position: relative;
+    }
+    .btn{
+      background-color: white;
+      width: 100px;
+      height: 50px;
+      font-size: 24px;
+      font-family: 'Times New Roman', Times, serif;
+      color: rgb(48, 129, 91);
+      font-weight: bold;
+      text-align: center;
+      line-height: 50px;
+      letter-spacing: 2px;
+      position: absolute;
+      top:50%;
+      left:50%;
+      transform: translate(-50%,-50%);
+      border-radius: 10px;
+    }
+    .go-top{
+      width: 80px;
+      height: 80px;
+      line-height: 80px;
+      text-align: center;
+      font-size: 24px;
+      color: rgb(255, 255, 255);
+      background-color: rgb(109, 194, 159);
+      border-radius: 50%;
+      position: fixed;
+      bottom:0;
+      right: 50px;
+      letter-spacing: 2px;
+    }
+  
+  </style>
+</head>
+
+<body>
+  <div class="nav">
+    <div class="logo"></div>
+    <div class="nav-btn-all">
+      <!-- a苗點=>anchor -->
+      <!-- href=>hyperlink refrence -->
+      <!-- 放置你要連結得位置=>可以用url,或目錄 -->
+      <!-- <a href=""></a> -->
+      <a href="#banner-1" class="nav-btn nav-btn-1">一區</a>
+      <a href="#banner-2" class="nav-btn nav-btn-2">二區</a>
+      <a href="#banner-3" class="nav-btn nav-btn-3">三區</a>
+    </div>
+  </div>
+  <div class="container">
+    <div id="banner-1" class="banner">
+      <div class="mask">
+      <div class="btn">ㄧ區</div>
+    </div>
+    <div id="banner-2" class="banner">
+      <div class="mask">
+      <div class="btn">二區</div>
+    </div>
+    <div id="banner-3" class="banner">
+      <div class="mask">
+      <div class="btn">三區</div>
+  </div>
+  </div>
+  </div>
+  <a href="#"class="go-top" >top</a>
+
+
+
+</body>
+
+</html>
+<!-- 1.導覽列（透明）
+      a.左方logo
+      b.右方三顆按鈕
+      c.按了之後到各區
+    2.內容三區
+      a.圖片
+      b.mask 下半部
+      c.小方塊標示區
+     -->

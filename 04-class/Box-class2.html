@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+/* 類別(class) 與 ID(id) 都是可套用到標籤上的屬性。
+設定 ID 就像幫標籤取一個「專屬的名字」，只能用一次；
+而類別(class) 就像是幫標籤貼上一個「分類」，可以重複使用。
+之後只要修改 ID 或類別的 CSS，有套用過的標籤都會同步修改，非常方便。 */
+
+        .box {
+            width: 100px;
+            height: 100px;
+        }
+
+        #box-red {
+            background-color: rgb(228, 54, 54);
+        }
+
+        #box-blue {
+            background-color: rgb(58, 95, 182);
+        }
+
+        #box-green {
+            background-color: rgb(36, 157, 102);
+        }
+        .box-red {
+            background-color: rgb(228, 54, 54);
+        }
+        .box-blue {
+            background-color: rgb(58, 95, 182);
+        }
+
+        .box-green {
+            background-color: rgb(36, 157, 102);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- id 只有一個 class可以有很多個 -->
+    <div class="box box-red"></div>
+    <div class="box box-blue"></div>
+    <div class="box box-green"></div>
+</body>
+
+</html>

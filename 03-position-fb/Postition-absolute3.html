@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box-1 {
+            width: 300px;
+            height: 300px;
+            background-color: rgb(118, 206, 230);
+            position: relative;
+
+        }
+
+        #box-2 {
+            width: 100px;
+            height: 100px;
+            background-color: rgb(23, 55, 72);
+            position: absolute;
+            bottom:-50px;
+            left:100px;
+        }
+            
+        #text {
+            font-size: 32px;
+            font-weight: bold;
+            background-color: yellow;
+            position: absolute;
+            left:80px;
+            bottom: 100px;
+
+        }
+        #box-3 {
+            width: 300px;
+            height: 300px;
+            background-color: rgb(237, 70, 19);
+            float: left;
+            /* <!-- <--! 父層相對/子層absolute絕對定位 --> */
+           
+        }
+        
+
+        
+        
+    </style>
+</head>
+
+<body>
+   
+    <div id="box-1">
+        <div id="text">hello</div>
+        <div id="box-2"></div>
+    <div id="box-3"></div>
+    </div>
+</body>
+
+</html>

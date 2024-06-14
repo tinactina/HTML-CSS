@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #a {
+            width: 150px;
+            height: 150px;
+            background-color: darkcyan;
+            margin-bottom: 10px;
+        }
+        .b {
+            background-color: darkgray;
+        }
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: bisque;
+            margin-bottom: 10px;
+        }
+        .big {
+            width: 150px;
+            height: 150px;
+        }
+        .small {
+            width: 50px;
+            height: 50px;
+        }
+        .red {
+            background-color: rgb(204, 17, 17)!important;
+        }
+        .pink {
+            background-color: rgb(248, 169, 252)!important;
+        }
+    </style>
+</head>
+<body>
+    <pre>
+        <!-- css權重
+        所謂權重就是優先順序
+        權重越大，優先權越大
+        inline-style > ID > Class > 元素(element)
+        如果權重一樣，後面(style裡的css)優先權比前面大 -->
+    </pre>
+<div id="a" class="b">1</div>
+<div id="a" class="small big red">2</div>
+<!-- inline-style =>直接寫在標籤裡面的css指令=> -->
+<div id="a" class="small big red pink" style="background-color:rgb(37, 172, 245)">2</div>
+<!-- !important =>終極大魔王（權重最大），非不得已再變 -->
+</body>
+</html>

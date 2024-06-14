@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <style>
+      body {
+         margin: 0;
+         height: 3000px;
+         font: 400 15px / 1.8 "Lato", sans-serif;
+      }
+
+      #banner-1,
+      #banner-2,
+      #banner-3,
+      #banner-4 {
+         background-color: aqua;
+         width: 100%;
+         height: 100vh;
+         background-image: url(./img/img_parallax.jpeg);
+         background-repeat: no-repeat;
+         background-size: cover;
+         background-attachment: fixed;
+         opacity: 0.5;
+         position: relative;
+      }
+
+      #banner-2 {
+         background-image: url(./img/img_parallax2.jpeg);
+      }
+
+      #banner-3 {
+         background-image: url(./img/img_parallax3.jpeg);
+      }
+
+      #btn-1,
+      #btn-2,
+      #btn-3,
+      #btn-4 {
+         padding: 10px 20px;
+         font-size: 40px;
+         letter-spacing: 8px;
+         color: white;
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         transform: translate(-50%, -50%);
+      }
+
+      #btn-1,
+      #btn-4 {
+         background-color: black;
+      }
+
+      #content-1,
+      #content-2,
+      #content-3 {
+         padding: 70px;
+
+      }
+
+      #content-2,
+      #content-3 {
+         background-color: rgb(60, 60, 60);
+      }
+
+      #title-1 {
+         font-size: 24px;
+         text-align: center;
+         margin-bottom: 20px;
+      }
+
+      #text-1,
+      #text-2,
+      #text-3 {
+         text-align: justify;
+         font-size: 20px;
+      }
+
+      #text-2,
+      #text-3 {
+         text-align: justify;
+         color: white;
+      }
+   </style>
+</head>
+
+<body>
+   <div id="all">
+      <div id="banner-1">
+         <div id="btn-1">SCROLL DOWN</div>
+      </div>
+      <div id="content-1">
+         <div id="title-1">PARALLAX DEMO</div>
+         <div id="text-1">Parallax scrolling is a web site trend where the background content is moved at a different
+            speed than the foreground content while scrolling. Nascetur per nec posuere turpis, lectus nec libero turpis
+            nunc at, sed posuere mollis ullamcorper libero ante lectus, blandit pellentesque a, magna turpis est sapien
+            duis blandit dignissim. Viverra interdum mi magna mi, morbi sociis. Condimentum dui ipsum consequat morbi,
+            curabitur aliquam pede, nullam vitae eu placerat eget et vehicula. Varius quisque non molestie dolor, nunc
+            nisl dapibus vestibulum at, sodales tincidunt mauris ullamcorper, dapibus pulvinar, in in neque risus odio.
+            Accumsan fringilla vulputate at quibusdam sociis eleifend, aenean maecenas vulputate, non id vehicula lorem
+            mattis, ratione interdum sociis ornare. Suscipit proin magna cras vel, non sit platea sit, maecenas ante
+            augue etiam maecenas, porta porttitor placerat leo.</div>
+      </div>
+      <div id="banner-2">
+         <div id="btn-2">LESS HEIGHT</div>
+      </div>
+      <div id="content-2">
+         <div id="text-2">Scroll up and down to really get the feeling of how Parallax Scrolling works.</div>
+      </div>
+      <div id="banner-3">
+         <div id="btn-3">SCROLL DOWN</div>
+      </div>
+      <div id="content-3">
+         <div id="text-3">Scroll up and down to really get the feeling of how Parallax Scrolling works.</div>
+      </div>
+      <div id="banner-4">
+         <div id="btn-4">COOL!</div>
+      </div>
+   </div>
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>before-after-2</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: bisque;
+        }
+
+        .box-1, .box-2 {
+            background-color: rgb(210, 236, 236);
+            position: relative;
+            margin: auto;
+        }
+
+        .box-1::before {
+            /*一定要有content*/
+            content: "";
+            width: calc(20px - 10px * 2);
+            height: calc(20px - 10px * 2);
+            border-width: 10px;
+            border-style: solid;
+            border-top-color:rgb(107, 154, 67);
+            border-left-color: rgb(107, 154, 67);
+            border-bottom-color:transparent;
+            border-right-color: transparent;
+            position: absolute;
+        
+            
+        }
+        .box-1::after {
+            content: "";
+            width: calc(20px - 10px * 2);
+            height: calc(20px - 10px * 2);
+            border-width: 10px;
+            border-style: solid;
+    
+            border-top-color:rgb(107, 154, 67);
+            border-left-color:transparent;
+            border-bottom-color:transparent;
+            border-right-color: rgb(107, 154, 67);
+            position: absolute;
+        }
+        .box-2::after {
+            content:"";
+            position: relative;
+            border: 2px solid palegreen;
+            color: orange;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .box-2:hover::after {
+            color:palegreen;
+            left: 10px;
+            position: absolute;
+            background-color:orange;
+         
+        }
+    </style>
+</head>
+<body>
+    <div class="box box-1"></div>
+    <!-- <div class="box box-2"></div> -->
+</body>
+</html>

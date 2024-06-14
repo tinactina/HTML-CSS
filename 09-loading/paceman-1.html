@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pacman1</title>
+    <style>
+    *{
+        box-sizing: border-box;
+    }
+    
+    body{
+        margin:0;
+    }
+    .background {
+        width: 800px;
+        height: 600px;
+        background-color: black;
+        position: relative;
+        margin: ;
+    }
+
+   .pacman-1 {
+        width: 100px; /* 宽度 */
+        height: 50px; /* 高度 */
+        background-color: rgb(243, 147, 147); /* 背景颜色 */
+        border-radius: 100px 100px 0 0; 
+        position: absolute;
+        
+
+    }
+
+    .pacman::before {
+        content: "";
+        width: 100px; /* 宽度 */
+        height: 50px; /* 高度 */
+        background-color: #f00; /* 背景颜色 */
+        border-radius: 0 0 100px 100px ; 
+        position: absolute;
+        bottom:100% ;
+
+        
+ 
+
+    }
+
+    </style>
+</head>
+<body>
+    <div class="background"></div>
+    <div class="pacman">
+        <div class="pacman-1"></div>
+        <div class="pacman-2"></div>
+    </div>
+</body>
+</html>

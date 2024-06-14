@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .ball{
+            width: 100px;
+            height: 100px;
+            background-color: darkcyan;
+            border-radius: 50%;
+            animation-name: color-ball;
+            animation-duration: 10s;
+            /*重複次數:3次*/
+            animation-iteration-count: 3;
+            /*重複次數:無限次*/
+            animation-iteration-count: infinite;
+        }    
+    
+        /*動畫名稱*/
+        @keyframes color-ball {
+            0%{
+                background-color: darkcyan;
+            }
+
+            25%{
+                background-color: darkorange
+            }
+
+            50%{
+                background-color: pink;
+            }
+
+            75%{
+                background-color: salmon
+            }
+
+            100%{
+                background-color: darkcyan;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="ball"></div>
+</body>
+</html>

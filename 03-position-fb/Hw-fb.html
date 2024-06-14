@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>facebook hw2</title>
+    <style>
+        body {
+            margin: 0;
+            height: 3000px;
+            background: linear-gradient(#000000, #626262, #1d1919);
+            background-color: black;
+        }
+
+        #nav {
+            width: 100%;
+            height: 70px;
+            background-color: rgb(49, 53, 51);
+            position: fixed;
+            z-index: 9;
+        }
+
+        #all {
+            background-color: rgb(30, 31, 31);
+            width: 80%;
+            height: 3000px;
+            margin: auto;
+            padding-top: 100px;
+        }
+
+        #fb {
+
+            width: 50px;
+            height: 50px;
+            background-image: url(./svg/facebook.svg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            position: absolute;
+            left: 30px;
+            top: 10px;
+        }
+
+        #nav-search {
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            left: 90px;
+            top: 10px;
+            background-color: rgb(25, 25, 25);
+            border-radius: 50%;
+            background-size: cover;
+
+        }
+
+        #nav-search-icon {
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            top: 20px;
+            left: 100px;
+
+        }
+
+        #nav-home {
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            top: 20px;
+            left: 400px;
+
+        }
+
+        #nav-video {
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            top: 20px;
+            left: 550px;
+
+        }
+
+        #nav-marketplace {
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            top: 20px;
+            left: 700px;
+
+        }
+
+        #nav-groups {
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            top: 20px;
+            left: 850px;
+
+        }
+
+        #nav-game {
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            top: 20px;
+            left: 1000px;
+
+        }
+
+        #nav-menu {
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            top: 20px;
+            left: 1200px;
+
+        }
+
+        #nav-messenger {
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            top: 20px;
+            left: 1250px;
+
+        }
+
+        #nav-notifications {
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            top: 20px;
+            left: 1300px;
+
+        }
+
+        #nav-account {
+            background-color: rgb(21, 29, 24);
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            position: absolute;
+            top: 20px;
+            left: 1350px;
+            background-image: url(./img/image-1.webp);
+            background-size: contain
+        }
+
+        #nav-account-icon {
+            width: 10px;
+            height: 10px;
+            position: absolute;
+            top: 40px;
+            left: 1370px;
+            background-color: grey;
+            border-radius: 50%;
+
+
+        }
+
+        #banner {
+            background-color: black;
+            width: 100%;
+            height: 500px;
+            background-image: url(./img/500x500.jpeg);
+            background-size: cover;
+            position: relative;
+        }
+
+        #avatar {
+            background-color: rgb(21, 9, 9);
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            position: absolute;
+            bottom: -50px;
+            left: 100px;
+            background-image: url(./img/image-1.webp);
+            background-size: cover;
+            border-width:6px; border-style:solid;
+            border-color:rgb(30, 31, 31);
+
+        }
+
+        #nav-camera {
+            width: 40px;
+            height: 40px;
+            position: relative;
+            bottom: -520px;
+            left: 210px;
+            background-color: grey;
+            border-radius: 50%;
+        }
+
+        #name {
+            font-size: 34px;
+            letter-spacing: 0.5px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-style: normal;
+            font-weight: bold;
+            position: relative;
+            color: azure;
+            top: 10px;
+            left: 270px;
+
+        }
+
+        #friends {
+            font-size: 20px;
+            letter-spacing: 0.5px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-style: normal;
+            position: relative;
+            color: azure;
+            top: 10px;
+            left: 270px;
+
+        }
+
+        #edit-cover-photo {
+            width: 200px;
+            height: 50px;
+            background-color: rgb(196, 191, 191);
+            border-radius: 10px;
+            position: absolute;
+            top: 520px;
+            right: 200px;
+            
+        }
+
+        #edit-cover-photo-icon {
+            width: 30px;
+            height: 30px;
+            background-image: url(./svg/noun-camera-6444485.svg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            position: absolute;
+            left: 8px;
+            top: 8px;
+
+        }
+
+        #edit-cover-photo-text {
+            font-size: 14px;
+            letter-spacing: 1px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-weight: bold;
+            position: absolute;
+            left: 50px;
+            top: 15px;
+            color: rgb(31, 31, 31);
+
+        }
+
+        #add-to-story {
+            width: 180px;
+            height: 50px;
+            background-color: rgb(31, 117, 230);
+            border-radius: 10px;
+            position: absolute;
+            right: 450px;
+            bottom: 30px;
+
+        }
+
+        #add-to-story-icon {
+            width: 30px;
+            height: 30px;
+            background-image: url(./svg/plus-svgrepo-com.svg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            position: absolute;
+            left: 8px;
+            top: 8px;
+
+        }
+
+        #add-to-story-text {
+            font-size: 14px;
+            letter-spacing: 1px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-weight: bold;
+            position: absolute;
+            left: 50px;
+            top: 15px;
+            color: rgb(31, 31, 31);
+
+        }
+
+        #edit-profile {
+            width: 160px;
+            height: 50px;
+            background-color: rgb(134, 135, 138);
+            border-radius: 10px;
+            position: absolute;
+            right: 270px;
+            bottom: 30px;
+
+        }
+
+        #edit-profile-icon {
+            width: 20px;
+            height: 20px;
+            background-image: url(./svg/noun-edit-1152654.svg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            position: absolute;
+            left: 15px;
+            top: 15px;
+
+        }
+
+        #edit-profile-text {
+            font-size: 14px;
+            letter-spacing: 1px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-weight: bold;
+            position: absolute;
+            left: 50px;
+            top: 15px;
+            color: rgb(31, 31, 31);
+        }
+
+        #people-you-may-know {
+            width: 60px;
+            height: 50px;
+            background-color: rgb(134, 135, 138);
+            border-radius: 10px;
+            position: absolute;
+            right: 190px;
+            bottom: 30px;
+
+        }
+
+        #people-you-may-know-icon {
+            width: 30px;
+            height: 30px;
+            background-image: url(./svg/svgexport-15.svg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            position: absolute;
+            left: 15px;
+            top: 12px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div id="nav">
+        <div id="fb"></div>
+        <div id="nav-search"></div>
+        <img id="nav-search-icon" src="./svg/svgexport-3.svg" alt="">
+        <img id="nav-home" src="./svg/svgexport-4.svg" alt="">
+        <img id="nav-video" src="./svg/svgexport-5.svg" alt="">
+        <img id="nav-marketplace" src="./svg/svgexport-6.svg" alt="">
+        <img id="nav-groups" src="./svg/svgexport-7.svg" alt="">
+        <img id="nav-game" src="./svg/svgexport-8.svg" alt="">
+        <img id="nav-menu" src="./svg/svgexport-10.svg" alt="">
+        <img id="nav-messenger" src="./svg/svgexport-12.svg" alt="">
+        <img id="nav-notifications" src="./svg/svgexport-13.svg" alt="">
+        <div id="nav-account"></div>
+        <img id="nav-account-icon" src="./svg/svgexport-15.svg" alt="">
+    </div>
+    <div id="all">
+        <div id="banner">
+            <div id="avatar"></div>
+            <img id="nav-camera" src="./svg/noun-camera-6444485.svg" alt="">
+        </div>
+        <div id="name">chiikawa</div>
+        <div id="friends"> 555 位朋友</div>
+    </div>
+           <div id="add-to-story">
+             <div id="add-to-story-icon"></div>
+             <div id="add-to-story-text">Add to story</div>
+    </div>
+           <div id="edit-cover-photo">
+             <div id="edit-cover-photo-icon"></div>
+             <div id="edit-cover-photo-text">Edit cover photo</div>
+    </div>
+           <div id="edit-profile">
+             <div id="edit-profile-icon"></div>
+             <div id="edit-profile-text">Edit profile</div>
+    </div>
+           <div id="people-you-may-know">
+              <div id="people-you-may-know-icon"></div>
+
+    </div>
+
+</body>
+
+</html>

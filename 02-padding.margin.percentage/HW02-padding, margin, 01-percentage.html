@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #all {
+            width: calc(80% - 10px *2);
+            height: calc(600px - 10px *2);
+            background-color: antiquewhite;
+            margin: 100px auto;
+            padding: 10px;
+        }
+
+        #header {
+            width: 100%;
+            height: calc(20% - 10px);
+            background-color: rgb(231, 182, 83);
+            margin-bottom: 10px;
+
+        }
+
+        #main {
+            width: 100%;
+            height: 60%;
+            background-color: antiquewhite;
+
+        }
+
+        #main-left {
+            width: calc(34% - 10px);
+            height: 100%;
+            background-color: rgb(130, 206, 221);
+            float: left;
+            margin-right: 10px;
+
+        }
+
+        #main-right {
+            width: 66%;
+            height: 100%;
+            background-color: antiquewhite;
+            float: left;
+
+        }
+
+        #main-right-top {
+            width: 100%;
+            height: calc(34% - 10px);
+            background-color: rgb(141, 130, 221);
+            float: left;
+        }
+
+        #main-right-middle {
+            width: 100%;
+            height: 32%;
+            background-color: rgb(221, 130, 168);
+            float: left;
+            margin: 10px 0px;
+        }
+
+        #main-right-bottom {
+            width: 100%;
+            height: calc(34% - 10px);
+            background-color: rgb(116, 200, 101);
+            float: left;
+        }
+
+        #footer {
+            width: 100%;
+            height: calc(20% - 10px);
+            background-color: rgb(32, 142, 131);
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="all">
+        <div id="header"></div>
+        <div id="main">
+            <div id="main-left"></div>
+            <div id="main-right">
+                <div id="main-right-top"></div>
+                <div id="main-right-middle"></div>
+                <div id="main-right-bottom"></div>
+            </div>
+        </div>
+        <div id="footer"></div>
+    </div>
+</body>
+
+</body>
+
+</html>

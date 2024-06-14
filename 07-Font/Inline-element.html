@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .line{
+            background-color: cadetblue;
+        }
+        /* 行內元素=>不會佔一整列
+        設定寬高無效
+        除非更改他的顯示模式
+        */
+
+        .special {
+            background-color: red;
+            width: 100px;
+            height: 50px;
+            display: inline-block;
+            text-align: center;
+            line-height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="line">
+        Lorem <span class="special" >ipsum</span> dolor sit amet consectrtur adipisicing elit.excepturi,dolorum.
+    
+    </div>
+
+    
+</body>
+</html>

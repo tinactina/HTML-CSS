@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table, th, td {
+         border: 1px solid black;
+         border-collapse: collapse;
+        }
+        th,td {
+            width: 150px;
+            text-align: center;
+        }
+        tbody tr:nth-of-type(2n+1) {
+            background-color: bisque;
+        }
+
+    </style>
+</head>
+
+<body>
+    <!-- 表格 -->
+    <table>
+         <!-- 表頭 -->
+        <thead>
+             <!-- table row -->
+          <tr>
+             <!-- 表頭中的每一欄位 -->
+            <th>Month</th>
+            <th>Savings</th>
+            <th>Costs</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+             <!-- table data 表格中每一欄位 -->
+            <td>January</td>
+            <td>$100</td>
+            <td>$100</td>
+          </tr>
+          <tr>
+            <td>February</td>
+            <td>$80</td>
+          </tr>
+        </tbody>
+         <!-- 表尾 -->
+             <tfoot>
+          <tr>
+            <td>Sum</td>
+            <td>$180</td>
+          </tr>
+        </tfoot>
+      </table>
+</body>
+</html>

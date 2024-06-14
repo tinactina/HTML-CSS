@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hamburger-menu</title>
+    <style>
+        a {
+            text-decoration: none;
+        }
+
+        .nav-btn-all {
+            background-color: rgb(255, 255, 255);
+            width: 170px;
+            display: none;
+            position: absolute;
+            margin-top: 20px;
+        }
+
+        .nav-btn {
+            background-color: rgb(63, 127, 116);
+            width: 130px;
+            height: 40px;
+            float: left;
+            margin-left: 40px;
+            margin-bottom: 20px;
+            text-align: center;
+            line-height: 40px;
+            border-radius: 10px;
+            border: 2px solid rgb(255, 200, 216);
+            letter-spacing: 3px;
+            font-family: 'Times New Roman', Times, serif;
+            color: rgb(253, 203, 221);
+        }
+
+        .nav-btn:hover {
+            background-color: rgb(255, 200, 216);
+            color: rgb(255, 255, 255);
+        }
+
+        .nav-btn:active {
+            background-color: rgb(23, 24, 24);
+            color: rgb(251, 255, 255);
+        }
+
+        .ham-btn {
+            background-color: rgb(142, 191, 158);
+            width: 100px;
+            height: 100px;
+            /*改成區塊層級*/
+            display: block;
+            position: relative;
+            border-radius: 20px;
+        }
+
+        /* 空格代表後代 */
+
+        .ham-btn .line {
+            background-color: rgb(255, 255, 255);
+            width: 80%;
+            height: 8px;
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            /*讓動作變慢 在一秒內完成*/
+            transition: 1s;
+            border-radius: 2px;
+
+        }
+
+        .ham-btn .line-1 {
+            top: 25%;
+        }
+
+        .ham-btn .line-2 {
+            top: 50%;
+        }
+
+        .ham-btn .line-3 {
+            top: 75%;
+        }
+
+        /*當漢堡標被選按（打勾）時(checked）
+        "＋"代表後面的第一個兄弟
+        "~"代表後面兄弟*/
+
+        #ham-switch:checked+.ham-btn .line-1 {
+            background-color: rgb(255, 255, 255);
+            top: 50%;
+            transform: translate(-50%, -50%) rotate(45deg);
+        }
+
+        #ham-switch:checked+.ham-btn .line-3 {
+            background-color: rgb(255, 255, 255);
+            top: 50%;
+            transform: translate(-50%, -50%) rotate(-45deg);
+        }
+
+        #ham-switch:checked+.ham-btn .line-2 {
+            background-color: rgb(255, 255, 255);
+            /* transform: translate(-50%, -50%) rotate(45deg);   */
+            display: none;
+        }
+
+        #ham-switch:checked~.nav-btn-all {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!--控制輸入記錄器-->
+    <!--hidden=> html隱藏元素-->
+    <input type="checkbox" id="ham-switch" hidden>
+    <!--漢堡標的本體-->
+    <label for="ham-switch" class="ham-btn">
+        <div class="line line-1"></div>
+        <div class="line line-2"></div>
+        <div class="line line-3"></div>
+    </label>
+    <div class="nav-btn-all"></div>
+
+    <div href="" class="nav-btn-all">
+        <a href="https://www.youtube.com/watch?v=_qDgLENi2dA" target="_blank" class="nav-btn">祝日</a>
+        <a href="https://youtu.be/qD50OkJWdC0?si=Heb73YVECiKLFzSE" target="_blank" class="nav-btn">予感</a>
+        <a href="https://youtu.be/cE7-jDEKtE4?si=0YdMMeCRdckaUO50" target="_blank" class="nav-btn">光の方へ</a>
+    </div>
+    </div>
+</body>
+
+</html>

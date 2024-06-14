@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>beforeafter神廟</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .box {
+            width: 700px;
+            height: 600px;
+            position: relative;
+            justify-content: center;
+            align-items: center;
+            
+        }
+
+        .box-main::before {
+            content: "";
+            width: 400px;
+            height: 500px;
+            border-width: 100px;
+            border-style: solid;
+            border-top-color: transparent;
+            border-left-color: transparent;
+            border-bottom-color: rgb(139, 182, 155);
+            border-right-color: transparent;
+            position: absolute;
+            bottom: 400px;
+            left: 411px;
+            z-index: 9;
+        }
+
+        .box-main::after {
+            content: "";
+            width: 500px;
+            height: 400px;
+            /* background-color: darkkhaki; */
+            border-width: 100px;
+            border-style: solid;
+            border-top-color: transparent;
+            border-left-color: transparent;
+            border-bottom-color: rgb(81, 113, 102);
+            border-right-color: transparent;
+            position: absolute;
+            bottom: -75px;
+            left: 365px;
+
+        }
+
+        .box-pillar::before {
+            content: "";
+            width: 70px;
+            height: 300px;
+            line-height: 300px;
+            z-index: 9;
+            background-color: rgb(209, 226, 220);
+            position: absolute;
+            border-width: 38px;
+            border-style: solid;
+            border-top-color: rgb(98, 149, 136);
+            border-left-color: white;
+            border-bottom-color: rgb(98, 149, 136);
+            border-right-color: white;
+            top: 200px;
+            left: 90px;
+
+        }
+
+        .box-pillar::after {
+            content: "";
+            width: 70px;
+            height: 300px;
+            line-height: 300px;
+            z-index: 9;
+            background-color: rgb(209, 226, 220);
+            position: absolute;
+            border-width: 38px;
+            border-style: solid;
+            border-top-color: rgb(98, 149, 136);
+            border-left-color: white;
+            border-bottom-color: rgb(98, 149, 136);
+            border-right-color: white;
+            top: 200px;
+            left: -205px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box box-main"></div>
+    <div class="box box-pillar"></div>
+</body>
+
+</html>

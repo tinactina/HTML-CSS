@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*通用選擇器*/
+        * {
+            box-sizing: border-box;
+        }
+
+        /*標籤選擇器*/
+        /*標籤（body、div）*/
+        body {
+            margin: 0;
+        }
+
+        /*id選擇器(id權限很高）*/
+        #my-box {
+            background-color: darkkhaki;
+        }
+
+        div {
+            background-color: tomato;
+            margin-bottom: 10px;
+        }
+
+        /*類別（class、)選擇器*/
+        .box {
+            width: 100px;
+            height: 100px;
+        }
+
+        /*::xxx偽元素*/
+        #my-box::first-letter {
+            font-size: 32px;
+            color: rgb(245, 245, 247);
+        }
+
+        /*偽類：xxx一種狀態*/
+        .box:hover {
+            background-color: skyblue;
+        }
+        input:checked {
+            width: 100px;
+            height: 100px;
+        }
+        /*兄弟選擇器＝>後面第一個兄弟*/
+        input:checked+label {
+            color: rgb(255, 153, 216);
+        }
+        input[type="text"]{
+            color: orange;
+        }
+        div:is(.is-box) {
+            background-color: rgb(89, 125, 113);
+        }
+        div:is(.circle){
+            background-color: darkorange;
+            border-radius: 50%;
+        }
+        /* not 選擇器 */
+        div:not(.is-box){
+            background-color: rgb(133, 32, 210);
+        }
+        .box.circle.green{
+            background-color: pink;
+        }
+        input, #box{
+            width: 100px;
+            height: 50px;
+            background-color: rgb(121, 151, 191);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="my-box">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur harum voluptatum delectus sequi doloribus
+        recusandae mollitia commodi quibusdam, vero asperiores facilis dolorem, ipsum earum. Dolorum dignissimos quasi
+        sapiente. Ea, saepe.
+    </div>
+    <div class="box">HHHH</div>
+    <input type="text">
+    <input type="checkbox" name="" id="">
+    <label for="">牛牛</label>
+    <input type="radio" name="" id="">
+    <div class="box is-box">A</div>
+    <div class="box circle green">A</div>
+    <div id="box"></div>
+</body>
+
+</html>

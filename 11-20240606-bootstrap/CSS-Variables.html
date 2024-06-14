@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* css變數必須設在根元素 =>:root 就是html */
+        /* :root, */
+        html {
+            /* css變數需要是--開頭 */
+            --try-bg-color:rgba(106, 158, 214, 0.788);
+            --try-font-color: rgba(193, 152, 102, 0.845);
+
+        }
+
+        .box {
+            /* var變數 */
+            background-color: var(--try-bg-color) ;
+            color: var(--try-bg-color) ;
+            /* /* 找不到就用後面的yellow */
+            background-color: var(--try-bg-color, yellow) ;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="box">skdskfndl</div>
+</body>
+</html>

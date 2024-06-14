@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>photo-card</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+            background-color: #E9E9E9;
+            padding: 100px;
+        }
+        .card{
+            width: 350px;
+            height: 500px;
+            background-color: rgb(255, 255, 255);
+            border: 1px solid rgb(124, 122, 119);
+            box-shadow:10px 10px 5px #aaa;
+            padding: 10px;
+            margin-bottom: 30px;
+        }
+        .card-1{
+
+            transform: rotate(-8deg);
+        }
+        .card-2{
+
+            transform: rotate(10deg);
+        }
+
+        img{
+            width: 300px;
+            background-size:contain;
+
+        }
+        .caption{
+            font-size: small;
+            font-style: italic;
+            display: flex;
+            justify-content:right
+        }
+
+    </style>
+</head>
+<body>
+    <div class="card card-1">
+     <img src="./img/LINE_ALBUM_Fukuoka_240502_14.jpg" alt="">
+     <p class="caption">FUKUOKA 2024</p>
+    </div>
+    <div class="card card-2">
+     <img src="./img/LINE_ALBUM_Fukuoka_240502_31.jpg" alt="">
+     <p class="caption">FUKUOKA 2024</p>
+    </div>
+</body>
+</html>
